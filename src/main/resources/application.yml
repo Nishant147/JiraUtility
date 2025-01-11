@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: Jira-Compliance-Utility
+  quartz:
+    job-store-type: memory
+  profiles:
+    active: JiraSDKClient
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 587
+    username: ea32d2f382b83b
+    password: c3d7cfb3e0343d
+    protocol: smtp
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /jcu
+
+app:
+  jira:
+    url: https://nishantvats.atlassian.net/
+    username: sudhanshukh90@gmail.com
+    apiToken: ATATT3xFfGF0M47lU_dywmXS6cAf1ItPfd5EIMsk6rWwZ7kwKYArIK6ZvCwQ9t6rURnywF-b7nigtNrND0oMAzobtKZObcSBzYjmUi-i1ksuN6_OFtLfp54gLN7Wj0K3m4uBuw9MTe3M8X38nLlTnR6CWAgt38yVA1YMrnJlrmOJRATV6kks_tE=39A5F8A9
+    maxResults: 50
+  compliance:
+    scheduler:
+      cron: "0 0 10 ? * MON-FRI"
+    email:
+      from: no-reply@irsisoftware.com
+      to: >
+        nishant.vats@irissoftware.com
+      cc: >
+        naveen@irissoftware.com,
+        neha@irissoftware.com
+      subject: "JIRA non-compliance Report"
+  report:
+    scheduler:
+      cron: "0 0 10 ? * 1/2"
+    email:
+      from: no-reply@irsisoftware.com
+      to: >
+        nishant.vats@irissoftware.com
+      cc: >
+        naveen@irissoftware.com,
+        neha@irissoftware.com
+      subject: "JIRA Report"
+  teams:
+    'Nishant Vats': nishant_vats@hotmail.com
+    'sudhanshu khandelwal': sudhanshukh90@gmail.com

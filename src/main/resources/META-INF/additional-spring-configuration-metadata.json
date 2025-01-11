@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "app.scheduler.cron",
+      "type": "java.lang.String",
+      "description": "A description for 'app.scheduler.cron'"
+    },
+    {
+      "name": "app.jira.url",
+      "type": "java.lang.String",
+      "description": "A description for 'app.jira.url'"
+    },
+    {
+      "name": "app.jira.username",
+      "type": "java.lang.String",
+      "description": "A description for 'app.jira.username'"
+    },
+    {
+      "name": "app.jira.apiToken",
+      "type": "java.lang.String",
+      "description": "A description for 'app.jira.apiToken'"
+    }
+  ]
+}
